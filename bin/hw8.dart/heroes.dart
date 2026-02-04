@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'game_character.dart';
 import 'boss.dart';
 import 'rpg_game.dart';
@@ -131,3 +133,34 @@ class Thor extends Hero {
     }
   }
 }
+
+class Ludoman  extends Hero {
+  Ludoman (String name, int health, int damage)
+  :super (name, health, damage, SuperAbility.luckymen);
+
+  @override
+  void applySuperPower(Boss boss, List<Hero> heroes){
+    int cub1  = RpgGame.random.nextInt(6)+1;
+    int cub2 = RpgGame.random.nextInt(6)+1;
+
+    if (cub2 == cub1){
+      boss.health -=   (cub2 * cub1);
+      print ('boss min');
+      print( "$cub1,'and'$cub2");
+    } else {
+      int resilt = cub1 + cub2 ;
+
+      var roundomhero = RpgGame.random.nextInt(heroes.length ); {
+      
+        
+      heroes[ roundomhero].health -= resilt;
+      print('hero min');
+      print("cub 2 $resilt");}
+      print(' hero $roundomhero');
+    }}
+
+    }
+
+  
+  
+  

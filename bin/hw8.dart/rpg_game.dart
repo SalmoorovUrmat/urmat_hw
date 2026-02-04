@@ -7,20 +7,21 @@ class RpgGame {
   static int roundNumber = 0;
 
   static void startGame() {
-    Boss boss = Boss('Alexey', 2000,100);
-    Warrior warrior1 = Warrior('Conan', 290, 5);
-    Warrior warrior2 = Warrior('Arthur', 280, 5);
-    Magic magic = Magic('Merlin', 270, 20, 5);
-    Medic doc = Medic('Aibolit', 250, 5, 5);
-    Medic assistant = Medic('Hasiya', 300, 5, 5);
-    Barsek berserk = Barsek ('Guts', 250, 5);
-    Golem golem = Golem ( " Supermen", 450, 5);
-    Lucky lucky = Lucky ('Betmen', 300,20,);
-    Witcher witcher = Witcher (" voskreshnik", 200, 0);
-    Thor thor = Thor('tor', 200, 5);
+    Boss boss = Boss('Alexey', 2000,10);
+    Warrior warrior1 = Warrior('Conan', 100,0);
+    Warrior warrior2 = Warrior('Arthur', 100, 0);
+    Magic magic = Magic('Merlin', 100, 0, 0);
+    Medic doc = Medic('Aibolit', 100, 0, 0);
+    Medic assistant = Medic('Hasiya', 100, 0, 0);
+    Barsek berserk = Barsek ('Guts', 100, 0);
+    Golem golem = Golem ( " Supermen", 100, 0);
+    Lucky lucky = Lucky ('Betmen', 100,0,);
+    Witcher witcher = Witcher (" voskreshnik", 100, 0);
+    Thor thor = Thor('tor', 100, 0);
+    Ludoman ludo = Ludoman("ludo", 100, 10);
 
     List<Hero> heroes = [warrior1, warrior2, magic, doc, assistant, berserk, golem, lucky,
-    witcher, thor];
+    witcher, thor, ludo];
     _printStatistics(boss, heroes);
     while (!_isGameOver(boss, heroes)) {
       _playRound(boss, heroes);

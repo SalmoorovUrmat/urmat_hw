@@ -24,4 +24,4 @@ bool isAlive () {
 
 }
 
-enum SuperAbility { heal, boost, blockRevert, criticalDamage, sacrifice, isStunned, luck, takeDamag }
+enum SuperAbility { heal, boost, blockRevert, criticalDamage, sacrifice, isStunned, luck, takeDamag, luckymen }
